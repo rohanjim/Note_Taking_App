@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home - Note Taking App</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            height: 100vh; /* Full height of the viewport */
+            font-family: 'Arial', sans-serif;
+            color: #fff;
+            display: flex; /* Use flexbox to center content */
+            justify-content: center; /* Center horizontally */
+            align-items: center; /* Center vertically */
+            background-image: url('https://images.unsplash.com/photo-1517248135467-1a729e3e63c6'); /* Background image */
+            background-size: cover; /* Cover the entire background */
+            background-position: center; /* Center the background */
+            animation: fadeIn 1.5s; /* Add fade-in animation */
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        .container {
+            background: rgba(0, 0, 0, 0.7); /* Semi-transparent black background */
+            padding: 40px;
+            border-radius: 15px;
+            text-align: center;
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.5);
+            max-width: 600px; /* Set a max width */
+            width: 90%; /* Responsive width */
+            transition: transform 0.3s; /* Add transition for scaling */
+        }
+
+        .container:hover {
+            transform: scale(1.05); /* Scale up on hover */
+        }
+
+        h1 {
+            font-size: 3em;
+            margin-bottom: 30px;
+            text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.9);
+        }
+
+        a {
+            display: inline-block;
+            margin: 20px 0;
+            padding: 15px 30px;
+            font-size: 1.5em;
+            text-decoration: none;
+            background: #4CAF50;
+            color: white;
+            border-radius: 5px;
+            transition: background 0.3s, transform 0.2s;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Add shadow to buttons */
+        }
+
+        a:hover {
+            background: #45a049;
+            transform: translateY(-3px); /* Lift effect on hover */
+        }
+
+        @media (max-width: 600px) {
+            h1 {
+                font-size: 2.5em;
+            }
+            a {
+                padding: 12px 20px;
+                font-size: 1.2em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Welcome to the Note Taking App</h1>
+        <a href="/register">Register</a>
+        <a href="/login">Login</a>
+    </div>
+</body>
+</html>

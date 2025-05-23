@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <title>Register</title>
+</head>
+<body>
+    <div class="background">
+        <div class="container">
+            <h1>Register</h1>
+            <form method="POST" class="form">
+                <input type="text" name="username" placeholder="Username" required class="input-field">
+                <input type="password" name="password" placeholder="Password" required class="input-field">
+                <button type="submit" class="submit-button">Register</button>
+            </form>
+            <p class="redirect">Already have an account? <a href="{{ url_for('login') }}" class="link">Login here</a></p>
+        </div>
+    </div>
+</body>
+</html>
